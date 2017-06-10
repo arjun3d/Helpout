@@ -1,4 +1,4 @@
-function gotoRecepientPage(){
+function gotoRequestsPage(){
     $("#myApp").show();
     $("#home").hide();
 }

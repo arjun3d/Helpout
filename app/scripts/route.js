@@ -13,17 +13,26 @@
       /* controllerAs: 'home'*/
     }
 
-var recepientList = {
-      url:'/recepient',
-      templateUrl: './app/modules/recepient/recepient.html',
-      controllerUrl:'./app/modules/recepient/controller.js',
+    var requestList = {
+      url:'/requests',
+      templateUrl: './app/modules/requests/request.html',
+      controllerUrl:'./app/modules/requests/controller.js',
       controller: 'recepCtrl',
       /* controllerAs: 'home'*/
     }
 
+    var payment = {
+      url:'/payment',
+      templateUrl: './app/modules/payment/payment.html',
+      controllerUrl:'./app/modules/payment/controller.js',
+      controller: 'payCtrl',
+      /* controllerAs: 'home'*/
+    }
+
+
 
     $stateProvider.state('home', home);
-    $stateProvider.state('recepient', recepientList);
+    $stateProvider.state('requests', requestList);
     $urlRouterProvider.otherwise('/home');
 
 
