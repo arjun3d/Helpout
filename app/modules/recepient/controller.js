@@ -11,8 +11,6 @@
 			console.log("data mila for education");
 
 			$scope.recepientsList = data;
-
-
 		},function(error){
 			console.log("abcd nhi aata  hai");
 
