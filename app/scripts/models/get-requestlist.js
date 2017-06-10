@@ -3,7 +3,7 @@
 
 	angular.module("HelpOut").factory("RequestRecepientList", function($resource, $location) {
 		return function(lang) {
-			return $resource('./requestList.json', {}, {
+			return $resource('http://172.16.23.101:8081/cashless-homeless/webapi/help/getRecipients', {}, {
 				'get': {
 					method: 'GET',
 					headers: { 'Accept-Language': lang }

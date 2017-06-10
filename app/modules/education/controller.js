@@ -2,7 +2,7 @@
 	'use strict';
 	angular.module("HelpOut").controller("eduCtrl", eduCtrl);
 
-	function eduCtrl($scope,RequestRecepientList,$timeout,$state,RecepientDetails){
+	function eduCtrl($scope,RequestRecepientList,$timeout,$state,RecepientDetails,$filter){
 		console.log("HOLa");
 
 		RequestRecepientList().get({
@@ -10,8 +10,8 @@
 		},function(data){
 			console.log("data mila for education");
 
-			$scope.recepientsList = data;
-
+			var responseData = data.requestList;
+			$scope.recepientsList = responseData;
 
 		},function(error){
 			console.log("abcd nhi aata  hai");
@@ -36,6 +36,6 @@
 
 	}
 
-	eduCtrl.$inject = ["$scope","RequestRecepientList","$timeout","$state","RecepientDetails"];
+	eduCtrl.$inject = ["$scope","RequestRecepientList","$timeout","$state","RecepientDetails","$filter"];
 
 })();
