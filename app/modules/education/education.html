@@ -13,20 +13,36 @@
 	
 </div>
 
- -->
+-->
 
 
-<div class="container">
 
-	<div>
-		<div ng-show="showError">
-			Oops something went wrong please try again.
-		</div>
-		<button ui-sref="home">back</button>
+
+
+
+<div>
+	<div ng-show="showError">
+		Oops something went wrong please try again.
+	</div>
+	<button ui-sref="home">back</button>
+</div>
+
+<div class="row" >
+
+	<div class="col-sm-6 col-md-4 col-lg-3 mt-4" ng-repeat="request in recepientsList | filter:{requestCategory:'EDUCATION'}"	>
+		<a ng-click="gotoRecepient(request.recipient.userId)">
+			<div class="card card-inverse card-featured">
+				<img class="card-img" data-ng-src='{{request.recipient.image.imageUrl}}'>
+				<div class="card-img-overlay">
+					<h2 class="card-title">{{request.recipient.userName}}</h2>
+
+				</div>
+			</div>
+		</a>
+
 	</div>
 
-	<div class="row" >
-		<div class="col-sm-6 col-md-4 col-lg-3 mt-4" ng-repeat="request in recepientsList | filter:{requestCategory:'EDUCATION'}"	>
+		<!-- <div class="col-sm-6 col-md-4 col-lg-3 mt-4" ng-repeat="request in recepientsList | filter:{requestCategory:'EDUCATION'}"	>
 			<div class="card" ng-click="gotoRecepient(request.recipient.userId)">
 				<img class="card-img-top" data-ng-src='{{request.recipient.image.imageUrl}}'>
 				
@@ -34,6 +50,5 @@
 					<span><i class=""></i>{{request.recipient.userName}}</span>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
-</div>

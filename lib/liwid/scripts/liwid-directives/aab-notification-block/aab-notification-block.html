@@ -1,0 +1,5 @@
+<alert ng-if="aabNotificationBlockController.showNotification" type="{{type}}" class="well-notification">
+	<button class="ocf-btn-icon glyphicon ocf-icon-close-alt notification-close" ng-click="aabNotificationBlockController.closeNotification()" data-testid="notification-icon"></button>
+	<span class="glyphicon" ng-class="aabNotificationBlockController.iconClass" data-testid="notification-icon2" title="{{messageKey}}"></span>
+	<p>{{messageKey|translate}} <a ng-if="aabNotificationBlockController.showDetailsLink" href="{{detailsUrl}}">{{detailsLink}}</a></p>
+</alert>

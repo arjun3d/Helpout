@@ -1,0 +1,494 @@
+/**
+ * Stylesheet to show colors, fonts and helper classes for the technical styleguide
+ * Child themes only import this file with their own variables
+ */
+
+@import "_theme_variables";
+
+// Status helper classes
+// use .label-warning, label-info or label-success
+// .sg-sg is styleguide standards & guidelines
+
+.sg-progress:after {
+    content: "In progress";
+}
+
+.sg-ux:after {
+    content: "UX Approved";
+}
+
+.sg-sg:after {
+    content: "S&G approved"
+}
+
+.sg-done:after {
+    content: "Ready to use";
+}
+
+.sg-view-source {
+    &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+    padding-bottom: 20px;
+}
+
+// Grid helper classes
+
+.show-grid {
+    margin-bottom: 15px;
+}
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+}
+
+
+// Breakpoints helper classes
+
+.responsive-utilities td.is-visible {
+    color: #468847;
+    background-color: #dff0d8!important;
+}
+.responsive-utilities td.is-hidden {
+    color: #ccc;
+    background-color: #f9f9f9!important;
+}
+
+
+// Colors helper class
+
+.styleguide-color {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #222;
+    font-weight: 400;
+    font-weight: 300;
+
+    display: block;
+
+    width: 100%;
+    margin-bottom: .5em;
+    padding: 2em;
+
+    text-align: center;
+
+    color: rgba(#fff, 1);
+    border-radius: 5px;
+    text-shadow: #000 0 0 2px;
+}
+
+
+// Bank wide theme brand colors for use across Bootstrap.
+
+.sg-brand-primary {
+    background-color: $brand-primary;
+}
+.sg-abn-additional { background-color: $abn-additional; }
+.sg-abn-action { background-color: $abn-action; }
+.sg-abn-primary-dark { background-color: $abn-primary-dark; }
+.sg-abn-accent { background-color: $abn-accent; }
+.sg-abn-call-to-action { background-color: $abn-call-to-action; }
+
+
+// Gray colors for use across Bootstrap.
+
+.sg-gray-darkest {  background-color: $gray-darkest; }
+.sg-gray-darker { background-color: $gray-darker; }
+.sg-gray-dark { background-color: $gray-dark; }
+.sg-gray { background-color: $gray; }
+.sg-gray-light { background-color: $gray-light; }
+.sg-gray-lighter { background-color: $gray-lighter; }
+.sg-gray-lightest { background-color: $gray-lightest; }
+.sg-abn-contrast { background-color: $abn-contrast; }
+
+
+// Semantic colors for use across Bootstrap.
+
+.sg-brand-success { background-color: $brand-success; }
+.sg-brand-info {
+    background-color: $brand-info;
+}
+
+.sg-brand-warning {
+    background-color: $brand-warning;
+}
+
+.sg-abn-highlight {
+    background-color: $abn-highlight;
+}
+
+.sg-abn-attention {
+    background-color: $abn-attention;
+}
+
+.sg-ocf-positive {
+    background-color: $ocf-positive;
+}
+
+.sg-ocf-negative {
+    background-color: $ocf-negative;
+}
+
+// Font families
+
+.sg-font-family-sans-serif {
+    font-family: $font-family-sans-serif;
+}
+
+.sg-font-family-serif {
+    font-family: $font-family-serif;
+}
+
+.sg-font-family-monospace {
+    font-family: $font-family-monospace;
+}
+
+.sg-font-family-base {
+    font-family: $font-family-base;
+}
+
+.sg-headings-font-family {
+    font-family: $headings-font-family;
+}
+
+// Icons helper classes
+
+
+.bs-icons {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+
+
+// style icons parts background to make the relation between content of the svg
+// and the canvas of an icon clear.
+//
+.bs-icons-list {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        width: 25%;
+        padding: 10px;
+        font-size: 10px;
+        line-height: 1.4;
+        text-align: center;
+        background-color: $gray-lightest;
+        background-color: $gray-lighter;
+        border: 1px solid $abn-contrast;
+    }
+
+    .glyphicon-class {
+        display: block;
+        text-align: center;
+        word-wrap: break-word;
+        padding-top: 10px;
+    }
+
+    .glyphicon {
+        background-color: $abn-contrast;
+    }
+
+    li.sg-invert {
+        background-color: $icon-neutral;
+
+        .glyphicon {
+            background-color: $gray;
+        }
+
+        .glyphicon-class {
+            color: $abn-contrast;
+        }
+    }
+}
+
+
+
+
+.sg-doc {
+  margin: 20px 0;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+// Utility classes
+
+// Markup
+.sg-markup-controls {
+    overflow: hidden;
+    padding-top: 1.5em;
+    clear: both;
+}
+
+.sg-source {
+    position: relative;
+}
+
+.sg-source pre {
+    background: #333;
+    border-radius: .5em;
+    border: 1px solid #ddd;
+    color: #fff;
+    overflow-y: scroll;
+    padding: .5em .3em;
+}
+
+.sg-source pre code {
+    background: transparent;
+}
+
+.js .sg-source {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.js .sg-source.is-active,
+.operamini .sg-source,
+.legacy .sg-source {
+    max-height: 2400px;
+}
+
+// Prettyprint
+.pln {
+    color: #ffffff;
+}
+/* plain text */
+@media screen {
+    .str,
+    .string {
+        color: #E6DB74;
+    }
+    /* string content */
+    .kwd,
+    .keyword {
+        color: #66D9EF;
+    }
+
+    /* a keyword */
+    .com,
+    .comment {
+        color: #75715E;
+    }
+
+    /* a comment */
+    .typ {
+        color: #A6E22E;
+    }
+
+    /* a type name */
+    .lit,
+    .number {
+        color: #AE81FF;
+    }
+
+    /* a literal value */
+    /* punctuation, lisp open bracket, lisp close bracket */
+    /* .pun, .opn, .clo { color: #660 } */
+    .tag {
+        color: #F92672;
+    }
+
+    /* a markup tag name */
+    .atn {
+        color: #A6E22E;
+    }
+
+    /* a markup attribute name */
+    .atv {
+        color: #E6DB74;
+    }
+
+    /* a markup attribute value */
+    /*.dec, .var { color: #606 }*/
+    /* a declaration; a variable name */
+    .fun {
+        color: #FF0000;
+    }
+    /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+    .str {
+        color: #006600;
+    }
+
+    .kwd {
+        color: #006;
+        font-weight: bold;
+    }
+
+    .com {
+        color: #600;
+        font-style: italic;
+    }
+
+    .typ {
+        color: #404;
+        font-weight: bold;
+    }
+
+    .lit {
+        color: #004444;
+    }
+
+    .pun,
+    .opn,
+    .clo {
+        color: #444400;
+    }
+
+    .tag {
+        color: #006;
+        font-weight: bold;
+    }
+    .atn {
+        color: #440044;
+    }
+    .atv {
+        color: #006600;
+    }
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+
+ol.linenums {
+    border-left: 1px solid #444;
+    margin: 0 0 0 3.3em;
+    /* IE indents via margin-left */
+    padding: 0;
+}
+
+ol.linenums li {
+    color: #bebec5;
+    line-height: 1.5;
+    padding-left: .8em;
+}
+
+// helper classes to display the grid values of a theme
+
+.sg-grid-xxs:before {
+    content : '#{$screen-xxs}';
+}
+
+.sg-grid-xxs-max:before {
+    content : '#{$screen-xxs-max}';
+}
+
+.sg-grid-xs:before {
+    content : '#{$screen-xs}';
+}
+
+.sg-grid-xs-max:before {
+    content : '#{$screen-xs-max}';
+}
+
+
+.sg-grid-sm:before {
+    content : '#{$screen-sm}';
+}
+
+.sg-grid-sm-max:before {
+    content : '#{$screen-sm-max}';
+}
+
+.sg-grid-md:before {
+    content : '#{$screen-md}';
+}
+
+.sg-grid-md-max:before {
+    content : '#{$screen-md-max}';
+}
+
+.sg-grid-lg:before {
+    content : '#{$screen-lg}';
+}
+
+.sg-grid-lg-supported {
+    text-decoration: line-through;
+}
+
+.sg-grid-maxfluid:before {
+    content : '#{ $container-lg}';
+}
+
+
+#source-button {
+    margin: 15px 0 15px 0;
+}
+
+// Modal fix to improve readability of code within the styleguide-modal
+
+.sg-modal-dialog .modal-dialog,
+.modal.sg-modal-dialog .modal-content {
+   width: 80vw;
+   max-width: 80vw;
+}
+
+.sg-modal-dialog  .modal-body .well {
+    overflow: auto;
+    width: calc(80vw - 20px);
+    max-with: 70%;
+    max-width: calc(80vw - 20px);
+}
+
+.sg-modal-dialog  .modal-body pre.prettyprint {
+    overflow: auto;
+    width: calc(80vw - 42px);
+    max-height: 55%;
+    max-height:calc(60vh - 80px);
+    min-height: 30vh;
+}
+
+
+// helper classes to display the icon size values of a theme
+
+.sg-icon-size-small:before {
+    content : '#{$icon-size-small}';
+}
+
+.sg-icon-size-default:before {
+    content : '#{$icon-size-default}';
+}
+
+.sg-icon-size-medium:before {
+    content : '#{$icon-size-medium}';
+}
+
+.sg-icon-size-large:before {
+    content : '#{$icon-size-large}';
+}
+
+.sg-icon-size-extra-large:before {
+    content : '#{$icon-size-extralarge}';
+}
+
+.sg-icon-size-extraextralarge:before {
+    content : '#{$icon-size-extraextralarge}';
+}
+
+.sg-h2 {
+    margin-top: 5px;
+}
+
+.sg-row {
+    margin-top: 50px;
+}
+
+.sg-h3 {
+    margin-top: 0px;
+}
