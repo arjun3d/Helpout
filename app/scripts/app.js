@@ -1,8 +1,16 @@
+function gotoRecepientPage(){
+    $("#myApp").show();
+    $("#home").hide();
+}
 (function(){
 
 'use strict'
 
-var app =   angular.module("HelpOut", ['ui.router','ngResource','gettext']);
+
+
+
+
+var app =   angular.module("HelpOut", ['ui.router','ngResource','gettext','angularSpinner']);
 
 
 
