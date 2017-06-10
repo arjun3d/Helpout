@@ -13,7 +13,40 @@
       /* controllerAs: 'home'*/
     }
 
-    var requestList = {
+   
+    var meals = {
+      url:'/meals',
+      templateUrl: './app/modules/meals/meals.html',
+      controllerUrl:'./app/modules/meals/controller.js',
+      controller: 'mealCtrl',
+      /* controllerAs: 'home'*/
+    }
+
+    var education = {
+      url:'/education',
+      templateUrl: './app/modules/education/education.html',
+      controllerUrl:'./app/modules/education/controller.js',
+      controller: 'eduCtrl',
+      /* controllerAs: 'home'*/
+    }
+
+    var recepient = {
+      url:'/recepient',
+      templateUrl: './app/modules/recepient/recepient.html',
+      controllerUrl:'./app/modules/recepient/controller.js',
+      controller: 'recepCtrl',
+      /* controllerAs: 'home'*/
+    }
+
+    $stateProvider.state('home', home);
+    $stateProvider.state('meals', meals);
+    $stateProvider.state('education', education);
+    $stateProvider.state('recepient', recepient);
+   /* $stateProvider.state('payment', payment);*/
+    $urlRouterProvider.otherwise('/home');
+
+
+     var requestList = {
       url:'/requests',
       templateUrl: './app/modules/requests/request.html',
       controllerUrl:'./app/modules/requests/controller.js',
@@ -29,14 +62,6 @@
       /* controllerAs: 'home'*/
     }
 
-
-
-    $stateProvider.state('home', home);
-    $stateProvider.state('requests', requestList);
-    $urlRouterProvider.otherwise('/home');
-
-
-    
 
 
   };
